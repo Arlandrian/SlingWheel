@@ -33,9 +33,9 @@ public class RoadManager : MonoBehaviour
     [SerializeField,Range(0f,1f)]
     private float _UCornerChance = 0.5f;
 
-    [Header("Pool Configs")]
-    [SerializeField]
-    private int _maxPoolSize = 70;
+    //[Header("Pool Configs")]
+    //[SerializeField]
+    //private int _maxPoolSize = 70;
 
     #endregion
 
@@ -231,8 +231,11 @@ public class RoadManager : MonoBehaviour
         _trackReleaseQueue.Enqueue(GO);
 
         // Release old GameObjects of last level to be used for later
-        if (_trackReleaseQueue.Count == _maxPoolSize-2)
+        // poolsize = object count need per level * generate next x level
+        int poolSize = (_numberOfCornersPerLevel * 2 + 3) * 3;
+        if (_trackReleaseQueue.Count == poolSize)
         {
+            Debug.Log("Pool limit reached");
             GameObject obj = _trackReleaseQueue.Dequeue();
             PoolManager.Instance.releaseObject(obj);
         }

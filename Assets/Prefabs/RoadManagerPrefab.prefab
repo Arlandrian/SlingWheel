@@ -54,5 +54,6 @@ MonoBehaviour:
   StartingLinePrefab: {fileID: 4263838852884384773, guid: 1f8ea34ee8d2cdf46a4f59a5c43ab7bc,
     type: 3}
   _numberOfCornersPerLevel: 2
+  _cornerIncreasePerLevel: 2
   _UCornerChance: 0.561
-  _maxPoolSize: 70
+  _maxPoolSize: 40

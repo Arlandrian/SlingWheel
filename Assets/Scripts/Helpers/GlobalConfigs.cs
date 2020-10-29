@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class GlobalConfigs 
 {
-    public static int CornerPerLevel = 5;
+    public static int CornerPerLevel = 6;
     // Increase corner count each level finished
     public static int CornerIncreasePerLevel = 1;
 
