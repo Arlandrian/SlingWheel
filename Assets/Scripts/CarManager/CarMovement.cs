@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarMovement : MonoBehaviour
+public class CarMovement : MonoBehaviour 
 {
     #region Serialized Variables
 
@@ -39,14 +39,8 @@ public class CarMovement : MonoBehaviour
     private float _FinishAnimationTime = 2f;
     private bool _isLevelUpAnimationActive = false;
 
-
-#if UNITY_EDITOR || UNITY_STANDALONE
     private bool IsTouching => Input.GetMouseButton(0);
     private bool IsTouchUp => Input.GetMouseButtonUp(0);
-#else
-    private bool IsTouching => Input.touchCount > 0;
-    private bool IsTouchUp => Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended;
-#endif
 
     #endregion
 

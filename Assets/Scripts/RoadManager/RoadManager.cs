@@ -33,10 +33,6 @@ public class RoadManager : MonoBehaviour
     [SerializeField,Range(0f,1f)]
     private float _UCornerChance = 0.5f;
 
-    //[Header("Pool Configs")]
-    //[SerializeField]
-    //private int _maxPoolSize = 70;
-
     #endregion
 
     #region Public Variables

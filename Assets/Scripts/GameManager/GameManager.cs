@@ -38,11 +38,7 @@ public class GameManager : Singleton<GameManager>
     private int _progressCounter = 0;
     private int _currentLevel = 1;
 
-#if UNITY_EDITOR || UNITY_STANDALONE
     private bool IsTouchUp => Input.GetMouseButtonUp(0);
-#else
-    private bool IsTouchUp => Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended;
-#endif
 
     #endregion
 
