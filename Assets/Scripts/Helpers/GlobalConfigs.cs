@@ -14,5 +14,5 @@ public static class GlobalConfigs
     public static float DriftSpeedAngular = 30f;
     public static float DriftLimitAngle = 30f;
 
-    public static float LevelFinishAnimationTimeInSec = 2f;
+    public static float LevelFinishAnimationTimeInSec = 1.5f;
 }
